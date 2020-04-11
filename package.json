@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build": "elm make --output=public/build/elm.js src/Main.elm",
+    "cozy-stack": "docker-compose exec cozy-app-dev cozy-stack",
+    "deploy": "npm run build -- --optimize && git-directory-deploy --directory public --branch build",
+    "postinstall": "cp node_modules/cozy-ui/dist/cozy-ui.min.css public/build/",
+    "watch": "chokidar 'src/**/*.elm' -c 'npm run build' --initial"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.0.0",
+    "elm": "^0.19.0-no-deps",
+    "elm-format": "^0.8.2",
+    "git-directory-deploy": "^1.5.1"
+  },
+  "dependencies": {
+    "cozy-ui": "^23.2.0"
+  }
+}
