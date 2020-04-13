@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="{{.Locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{.AppName}} - {{.Domain}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="build/cozy-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    {{.ThemeCSS}}
+    {{.CozyBar}}
+    <script src="build/elm.js"></script>
+</head>
+
+<body class="u-ov-hidden">
+    <div role="application" data-cozy-token="{{.Token}}" data-cozy-domain="{{.Domain}}" data-cozy-locale="{{.Locale}}"
+        data-cozy-app-editor="{{.AppEditor}}" data-cozy-app-name="{{.AppName}}" data-cozy-app-slug="{{.AppSlug}}"
+        data-cozy-icon-path="{{.IconPath}}">
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

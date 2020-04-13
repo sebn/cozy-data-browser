@@ -1,0 +1,125 @@
+{
+  "name": "Data Browser",
+  "name_prefix": "Cozy",
+  "slug": "data-browser",
+  "type": "webapp",
+  "icon": "icons/data-browser.svg",
+  "description": "Browse all the data stored in your Cozy.",
+  "categories": [
+    "cozy"
+  ],
+  "version": "0.1.0",
+  "licence": "AGPL-3.0",
+  "source": "https://github.com/sebn/cozy-data-browser.git@build",
+  "developer": {
+    "name": "Sébastien Nicouleaud",
+    "url": "https://github.com/sebn"
+  },
+  "routes": {
+    "/": {
+      "folder": "/",
+      "index": "index.html",
+      "public": false
+    }
+  },
+  "permissions": {
+    "accounts": {
+      "description": "Required to browse data",
+      "type": "io.cozy.accounts",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "apps": {
+      "description": "Required to browse data & switch app from the cozy bar",
+      "type": "io.cozy.apps",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "app suggestions": {
+      "description": "Required to browse data",
+      "type": "io.cozy.apps.suggestions",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "contacts": {
+      "description": "Required to browse data",
+      "type": "io.cozy.contacts",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "contact groups": {
+      "description": "Required to browse data",
+      "type": "io.cozy.contacts.groups",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "doctypes": {
+      "description": "Required to browse data",
+      "type": "io.cozy.doctypes",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "files": {
+      "description": "Required to browse data",
+      "type": "io.cozy.files",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "file versions": {
+      "description": "Required to browse data",
+      "type": "io.cozy.files.versions",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "jobs": {
+      "description": "Required to browse data",
+      "type": "io.cozy.jobs",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "konnectors": {
+      "description": "Required to browse data",
+      "type": "io.cozy.konnectors",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "notifications": {
+      "description": "Required to browse data",
+      "type": "io.cozy.notifications",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "session logins": {
+      "description": "Required to browse data",
+      "type": "io.cozy.sessions.logins",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "settings": {
+      "description": "Required to browse data & display Claudy",
+      "type": "io.cozy.settings",
+      "verbs": [
+        "GET"
+      ]
+    },
+    "triggers": {
+      "description": "Required to browse data",
+      "type": "io.cozy.triggers",
+      "verbs": [
+        "GET"
+      ]
+    }
+  }
+}
